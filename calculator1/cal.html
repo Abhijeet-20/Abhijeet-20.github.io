@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+<link rel="icon" href="icons8-calculator-64.png">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color: #FEFADC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cal{
+            width: 322px;
+            height: 480px;
+            /* background-color: #FBACBE; */
+            background: linear-gradient(135deg, #00feba,#5b548a);
+            border: 1px solid black;   
+            border-radius: 10px;
+            /* box-shadow: 8px 8px 0px #615D67;  */
+            box-shadow: 0 45px 65px rgba(0,0,0,0.50), 0 35px 22px rgba(0,0,0,0.16);
+            
+        } 
+        .inp{
+            margin-top: 30px;
+            margin-left: 6px;
+        }
+        input{
+            width: 300px;
+            height: 15vh;
+            outline: none;
+            font-size: 45px;
+            border-radius: 10px;
+            border: 1px solid black;
+            text-align: right;
+            cursor: pointer;
+            
+        }
+        button{
+            width: 69px;
+            height: 50px;
+            margin-left: 6px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            color: black;
+            cursor: pointer;
+        }
+        #equal{
+            width: 148px;
+            height: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cal">
+            <div class="inp">
+                <input type="text" class="input">
+            </div>
+            <div class="rows">
+                <button class="button">C</button>
+                <button class="button">←</button>
+                <button class="button">%</button>
+                <button class="button">/</button>
+            </div>
+            <div class="rows">
+                <button class="button">7</button>
+                <button class="button">8</button>
+                <button class="button">9</button>
+                <button class="button">*</button>
+            </div>
+            <div class="rows">
+                <button class="button">4</button>
+                <button class="button">5</button>
+                <button class="button">6</button>
+                <button class="button">-</button>
+            </div>
+            <div class="rows">
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
+                <button class="button">+</button>
+            </div>
+            <div class="rows">
+                <button class="button">0</button>
+                <button class="button">.</button>
+                <button class="button" id="equal">=</button>
+                <!-- <button class="button"></button> -->
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let input= document.querySelector('.input');
+        let buttons = document.querySelectorAll('.button');
+
+        let string = "";
+        let arr = Array.from(buttons);
+        arr.forEach(button => {
+            button.addEventListener('click' , (e)=>{
+                if(e.target.innerHTML == '='){
+                    string = eval(string);
+                    input.value = string;
+                }
+                else if(e.target.innerHTML == 'C'){
+                    string = "";
+                    input.value = string;
+                }
+                else if(e.target.innerHTML == '←'){
+                    string = string.substring(0, string.length-1);
+                    input.value = string;
+                }
+                else{
+                    string += e.target.innerHTML;
+                input.value = string;
+                }
+                
+
+            });
+        });
+    </script>
+</body>
+</html>

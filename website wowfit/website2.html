@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="icon" href="pic-1.png">
+    <title>mywowfit.com</title>
+    <style>
+        *{
+            margin: 0;
+            font-family: sans-serif;
+        }
+        /******************************************** NAV ********************************************/
+        nav{
+            width: 100%;
+            height: 60px;
+            background: rgba(255,255,255,0.9);
+            position: fixed;
+            z-index: 20;
+        }
+        .left{
+            width: 20%;
+            height: 60px;
+            /* background-color: rgb(255, 255, 255); */
+            float: left;
+        }
+        .left>h1{
+            text-align: center;
+            line-height: 60px;
+            font-family: 'Monotype Corsiva';
+        }
+        .center{
+            width: 60%;
+            height: 60px;
+            /* background-color: red; */
+            float: left;
+        }
+        .center>ul>li{
+            float: left;
+            list-style: none;
+            text-align: center;
+            line-height: 60px;
+            padding-left: 60px;
+        }
+        .center>ul>li>a{
+            text-decoration: none;
+            color: black;
+        }
+        .right{
+            width: 20%;
+            height: 60px;
+            /* background-color: yellow; */
+            float: left;
+        }
+        .right>a{
+            text-decoration: none;
+            line-height: 40px;
+            display: block;
+            width: 150px;
+            height: 40px;
+            color: white;
+            background-color: rgb(71,182,165);
+            text-align: center;
+            margin: 10px 50px;
+            border-radius: 10px;
+        }
+        .right>a:hover{
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+        }
+        /****************************************** section1 ******************************************/
+        .first{
+            width: 100%;
+            height: 100vh;
+            /* background-color: red; */
+        }
+        .trainer{
+            width: 50%;
+            height: 100vh;
+            background-color: whitesmoke;
+            float: left;
+        }
+        .trainer>h1{
+            padding: 100px 50px;
+            font-size: 65px;
+        }
+        pre{
+            display: inline-block;
+            font-size: 19px;
+            position: relative;
+            top: -40px;
+            left: 50px;
+            color: gray;
+        }
+        .trainer>a{
+            position: relative;
+            left: 50px;
+            width: 260px;
+            height: 60px;
+            display: block;
+            background-color: rgb(71,182,165);
+            color: white;
+            text-decoration: none;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 10px;
+            z-index: 1;
+        }
+        .trainer>a:hover{
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+        }
+        .trainerimg{
+            width: 50%;
+            height: 100vh;
+            background-image: url("680-min.jpg");
+            float: left;
+        }
+        .first2{
+            width: 100%;
+            height: 150px;
+            background-color: white;
+            position: relative;
+        }
+        .one1{
+            width: 240px;
+            height: 130px;
+            /* background-color: black; */
+            border-radius: 10px;
+            border: 1px solid black;
+            float: left;
+            text-align: center;
+            margin: 10px 0px 0px 140px;
+        }
+        .fa-star{
+            font-size: 24px;
+            color: rgb(71,182,165);
+        }
+        .one1>h4{
+            display: inline-block;
+            font-size: 28px;
+            padding: 20px 0px 0px 0px;
+        }
+        .one1>h2{
+            padding-top: 30px;
+        }
+        /****************************************** section2 ******************************************/
+        .second{
+            width: 100%;
+            height: 240vh;
+            background-color: whitesmoke;
+            position: relative;
+        }
+        .second>h1{
+            font-size: 55px;
+            padding: 100px 50px;
+        }
+        .a{
+            width: 30%;
+            height: 300px;
+            /* background-color: aqua; */
+            float: left;
+            margin: -50px 21px;
+        }
+        .a>i{
+            font-size: 60px;
+            padding: 0px 20px;
+        }
+        .a>h2{
+            font-size: 25px;
+            padding: 20px 20px;
+        }
+        .a p{
+            padding: 20px 20px;
+            font-size: 18px;
+        }
+        .table{
+            width: 993px;
+            height: 500px;
+            margin: 300px 150px;
+            border-radius: 10px;
+        }
+        .sq1{
+            width: 988px;
+            height: 50px;
+            background-color: black;
+            border: 1px solid black;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            float: left;
+        }
+        .squ1{
+            width: 200px;
+            height: 90px;
+            border: 1px solid black;
+            border-top: none;
+            float: left;
+            box-sizing: border-box;
+        }
+        .squ2{
+            width: 395px;
+            height: 90px;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            float: left;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .table>.squ2>p{
+            display: inline;
+            font-size: 17px;
+        }
+        .table>.squ1>h1{
+            padding: 0px 10px;
+            line-height: 90px;
+            font-size: 20px;
+        }
+        .table>.sq1>h2,h3{
+            display: inline-block;
+            font-size: 20px;
+            padding-left: 280px;
+            line-height: 50px;
+            color: white;
+        }
+        .second>a{
+            width: 260px;
+            height: 60px;
+            display: block;
+            background-color: rgb(71,182,165);
+            color: white;
+            text-decoration: none;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 10px;
+            font-family: arial;
+            z-index: 1;
+            position: absolute;
+            top: 1200px;
+            left: 480px;
+        }
+        .second>a:hover{
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+        }
+        /****************************************** section3 ******************************************/
+        .third{
+            width: 100%;
+            height: 150vh;
+            /* background-color: yellow; */
+        }
+        .prsnltrainer{
+            width: 60%;
+            height: 400px;
+            /* background-color: aqua; */
+            float: left;
+        }
+        .prsnltrainerimg{
+            width: 40%;
+            height: 400px;
+            /* background-color: aquamarine; */
+            background-image: url("142529.jpg");
+            background-size: cover;
+            float: left;
+        }
+        .third>.prsnltrainer>h1{
+            font-size: 50px;
+            padding: 50px 50px;
+        }
+        .third>.prsnltrainer>p{
+            padding: 0px 50px;
+            font-size: 25px;
+        }
+        .prsnltrainer2{
+            width: 40%;
+            height: 450px;
+            /* background-color: aquamarine; */
+            float: left;
+        }
+        .prsnltrainerimg2{
+            width: 60%;
+            height: 450px;
+            /* background-color: aqua; */
+            background-image: url("Screenshot\ 2023-04-18\ 142628.jpg");
+            background-position: center ;
+            background-size: cover;
+            float: left;
+        }
+        .third>.prsnltrainer2>h1{
+            font-size: 40px;
+            padding-top: 90px;
+        }
+        .third>.prsnltrainer2>p{
+            padding: 40px 0px;
+            font-size: 22px;
+        }
+        /****************************************** section4 ******************************************/
+        .four{
+            width: 100%;
+            height: 100vh;
+            /* background-color: red; */
+        }
+        .four>h1{
+            font-size: 55px;
+            padding: 50px 50px ;
+        }
+        .programimg{
+            width: 100%;
+            height: 360px;
+            /* background-color: bisque; */
+            background-image: url("142654.jpg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /****************************************** section5 ******************************************/
+        .five{
+            width: 100%;
+            height: 65vh;
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        .five>h1{
+            font-size: 40px;
+            padding-top: 50px;
+        }
+        .five>p{
+            font-size: 20px;
+            padding-top: 20px;
+        }
+        .five>a{
+            text-decoration: none;
+            line-height: 60px;
+            display: block;
+            width: 200px;
+            height: 60px;
+            color: white;
+            background-color: rgb(71,182,165);
+            text-align: center;
+            margin: 50px 520px;
+            border-radius: 10px;
+        }
+        .five>a:hover{
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+        }
+        /****************************************** section6 ******************************************/
+        .six{
+            width: 100%;
+            height: 200vh;
+            /* background-color: aquamarine; */
+            position: relative;
+        }
+        .six>h1{
+            font-size: 55px;
+            padding: 50px 50px;
+        }
+        .six>p{
+            font-size: 30px;
+            padding: 10px 50px;
+        }
+        .trainersimg{
+            width: 100%;
+            height: 400px;
+            margin-top: 50px;
+            background-image: url("150631.jpg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .trainersdata{
+            margin: -8px 30px;
+            width: 255px;
+            height: 250px;
+            /* background-color: beige; */
+            float: left;
+        }
+        .trainersdata>h1{
+            font-size: 30px;
+            padding-left: 15px;
+            font-family: sans-serif;
+        }
+        .trainersdata>p{
+            font-size: 20px;
+            padding: 20px 10px;
+            color: gray;
+        }
+        .trainersdata>a{
+            text-decoration: none;
+            display: block;
+            width: 120px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color: rgb(255, 148, 7);
+            margin: 20px 55px;
+            border-radius: 10px;
+            color: white;
+        }
+        .trainersdata>a:hover{
+            color: black;
+            border: 1px solid black;
+            background-color: white;
+        }
+        .six>a{
+            display: block;
+            height: 50px;
+            width: 120px;
+            border: 2px solid rgb(71,182,165);
+            position: absolute;
+            top: 1060px;
+            left: 550px;
+            text-align: center;
+            line-height: 50px;
+            text-decoration: none;
+            color: rgb(71,182,165);
+            border-radius: 10px;
+        }
+        .six>a:hover{
+            background-color: rgb(71,182,165);
+            color: white;
+        }
+        /****************************************** section7 ******************************************/
+        .seven{
+            width: 100%;
+            height: 110vh;
+            /* background-color: aqua; */
+            position: relative;
+        }
+        .seven>h1{
+            text-align: center;
+            padding-top: 20px;
+            font-size: 55px;
+            padding-bottom: 30px;
+        }
+        .seven>p{
+            font-size: 20px;
+            position: absolute;
+            top: 100px;
+            left: 480px;
+            
+        }
+        .pricing{
+            width: 842px;
+            height: 330px;
+            margin: 20px 50px ;
+            /* background-color: violet; */
+            border: 2px solid black;
+            float: left;
+            border-radius: 20px;
+        }
+        .price1{
+            width: 280px;
+            height: 200px;
+            /* background-color: antiquewhite; */
+            margin-top: 50px;
+            border-right: 1px solid black;
+            float: left;
+            text-align: center;
+        }
+        .price1>h2{
+            color: green;
+            font-size: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .price1>h1{
+            font-size: 50px;
+        }
+        .pricing>a{
+            text-decoration: none;
+            font-size: 20px;
+            color: red;
+            position: relative;
+            top: 25px;
+            left: 350px;
+        }
+        .freesession{
+            width: 260px;
+            height: 330px;
+            margin-top: 20px;
+            /* background-color: antiquewhite; */
+            border: 2px solid black;
+            float: left;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .freesession>h1{
+            font-size: 35px;
+            padding: 30px 20px 20px 20px;
+        }
+        .freesession>p{
+            font-size: 20px;
+            padding: 10px 20px 0px 20px;
+        }
+        .freesession>a{
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            margin: 30px 55px;
+            border-radius: 10px;
+            color: white;
+            display: block;
+            height: 50px;
+            width: 150px;
+            background-color: rgb(71,182,165);
+        }
+        .freesession>a:hover{
+            background-color: coral;
+        }
+        /****************************************** section8 ******************************************/
+        .eight{
+            width: 100%;
+            height: 100vh;
+            background-color: antiquewhite;
+            text-align: center;
+            position: relative;
+        }
+        .eight>h1{
+            font-size: 55px;
+            padding-top: 150px;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+        }
+        .eight>p{
+            font-size: 22px;
+            padding-top: 30px;
+            color: grey;
+            padding-bottom: 40px;
+        }
+        .circle1{
+            width: 80px;
+            height: 80px;
+            background-color: rgb(71,182,165);
+            border-radius: 100%;
+            position: absolute;
+            top: 280px;
+            left: 20px;
+            font-size: 60px;
+            
+        }
+        .circle2{
+            width: 80px;
+            height: 80px;
+            background-color: rgb(71,182,165);
+            border-radius: 100%;
+            position: absolute;
+            top: 280px;
+            left: 1160px;
+            font-size: 60px;
+        }
+        .circle1:hover,.circle2:hover{
+            background-color: aqua;
+        }
+        
+        /****************************************** section9 ******************************************/
+        .nine{
+            width: 100%;
+            height: 140vh;
+            background-image: url("website2.jpg");
+            background-size: cover;
+        }
+        .info{
+            width: 48%;
+            height: 120vh;
+            border-radius: 20px;
+            background-color: white;
+            border: 2px solid black;
+            margin: 50px 600px;
+            position: relative;
+        }
+        .info>h1{
+            display: inline;
+            font-size: 55px;
+            position: relative;
+            top: 50px;
+            left: 90px;
+        }
+        .info>p{
+            font-size: 14px;
+            padding: 60px 100px;
+        }
+        input{
+            width: 80%;
+            height: 50px;
+            margin: 10px 50px;
+            outline: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        input::placeholder{
+            font-size: 15px;
+        }
+        input[type=checkbox]{
+            height: 20px;
+            width: 20px;
+        }
+        .info>pre{
+            color: black;
+            font-size: 15px;
+            position: absolute;
+            top: 583px;
+            left: 80px;
+            letter-spacing: 1px;
+        }
+        .getstarted{
+            display: block;
+            height: 50px;
+            width: 150px;
+            background-color: rgb(71,182,165);
+            color: white;
+            border-radius: 10px;
+            margin: 10px 200px;
+            text-align: center;
+            text-decoration: none;
+            line-height: 50px;
+        }
+        .getstarted:hover{
+            background-color: white;
+            color: rgb(71,182,165);
+            border: 2px solid rgb(71,182,165);
+        }
+        /****************************************** section10 ******************************************/
+        .ten{
+            width: 100%;
+            height: 120vh;
+            /* background-color: bisque; */
+        }
+        .ten>h1{
+            font-size: 60px;
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 40px;            
+        }
+        .faq1{
+            width: 600px;
+            height: 80px;
+            /* background-color: aqua; */
+            border-top: 2px solid black;
+            float: left;
+            margin: 5px 15px;
+            position: relative;
+            /* display: flex; */
+            
+        }
+        .circle3{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            /* display: inline-block; */
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background-color: rgb(71,182,165);
+            font-size: 50px;
+            
+        }
+        .ten>.faq1>h1{
+            padding: 10px 60px 0px 0px;
+            font-weight: lighter;
+            font-size: 20px;
+        }
+        /****************************************** section11 ******************************************/
+        .eleven{
+            width: 100%;
+            height: 60vh;
+            background-color: rgb(46,63,72);
+            color: white;
+        }
+        .abc{
+            width: 20%;
+            height: 60vh;
+            /* background-color: aqua; */
+            float: left;
+            margin-left: 10px;
+        }
+        .abc>h1{
+            font-size: 30px;
+            padding-left: 20px;
+            font-family: 'Monotype Corsiva';
+        }
+        .abc>p{
+            padding-top: 20px;
+            padding-left: 20px;
+            font-size: 16px;            
+        }
+    </style>
+</head>
+<body>
+    <!----------------------------------------------- NAV ------------------------------------------------>
+    <nav>
+        <div class="left">
+            <h1>WOW FIT</h1>
+        </div>
+        <div class="center">
+            <ul>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">TRAINERS</a></li>
+                <li><a href="">PRICING</a></li>
+                <li><a href="">TESTIMONIALS</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <a href="">Try for Free</a>
+        </div>
+    </nav>
+    <!-------------------------------------------- section1 -------------------------------------------->
+    <section class="first">
+        <div class="trainer">
+            <h1>Online<br>Personal Trainer</h1>
+            <pre>&#10004; &nbsp; Live 1-on-1 workouts with a personal trainer</pre><br><br>
+            <pre>&#10004; &nbsp; Online. At home, outside, or on the go</pre><br><br>
+            <pre>&#10004; &nbsp; Try your first session for free!</pre>
+            <a href="">FIND A TRAINER</a>
+        </div>
+        <div class="trainerimg"></div>
+    </section>
+    <div class="first2">
+        <div class="one1">
+            <h4>TRUSTPILOT</h4><br><br></i>4.8&#10032;
+        </div>
+        <div class="one1">
+            <h2>1250+<br>active users</h2>
+        </div>
+        <div class="one1">
+            <h2>50+<br>Personal trainers</h2>
+        </div>
+    </div>
+    <!-------------------------------------------- section2 -------------------------------------------->
+    <section class="second">
+        <h1>Having a Personal Trainer is now<br>affordable and convenient</h1>
+        <div class="a">
+            <h2>&#9993;<br>Fill in a short questionnaire</h2>
+            <p>We'll contact you to learn about your health and fitness background so that your personal trainer can design a training plan tailored to your individual needs</p>
+        </div>
+        <div class="a">
+            <h2>&#9990;<br>Get matched with a hand-picked trainer</h2>
+            <p>Try our free 1-1 service — a video call via Zoom, WhatsApp or Skype with a trainer who will be matched to your preferences and requirements.</p>
+        </div>
+        <div class="a">
+            <h2>&#9998;<br>Enjoy expert coaching from a real person</h2>
+            <p>Your trainer will coach, push and motivate you every step of the way on your fitness journey.</p>
+        </div>
+        <div class="table">
+            <div class="sq1">
+                <h2>WOW FIT</h2>
+                <h3>In-person</h3>
+            </div>
+            <div class="squ1">
+                <h1>Price</h1>
+            </div>
+            <div class="squ2">
+                <p>&#9745; &nbsp; Price per session is cheaper than having lunch out.</p>
+            </div>
+            <div class="squ2">
+                <p>&#9746; &nbsp; Over $50+ per session with a personal trainer.</p>
+            </div>
+            <div class="squ1">
+                <h1>Convenience</h1>
+            </div>
+            <div class="squ2">
+                <p>&#9745; &nbsp; Train from home or a gym at any time. Change your schedule easily.</p>
+            </div>
+            <div class="squ2">
+                <p>&#9746; &nbsp; Restricted to your gym's opening hours.</p>
+            </div>
+            <div class="squ1">
+                <h1>Comfert</h1>
+            </div>
+            <div class="squ2">
+                <p>&#9745; &nbsp; Work out in private, wherever you feel most comfortable.</p>
+            </div>
+            <div class="squ2">
+                <p>&#9746; &nbsp; Busy, crowded gyms give you no privacy at all.</p>
+            </div>
+            <div class="squ1">
+                <h1>Variety</h1>
+            </div>
+            <div class="squ2">
+                <p>&#9745; &nbsp; Mix and match different trainers and health professionals.</p>
+            </div>
+            <div class="squ2">
+                <p>&#9746; &nbsp; Costly multiple club memberships and personal training.</p>
+            </div>
+            <div class="squ1">
+                <h1>Consistency</h1>
+            </div>
+            <div class="squ2">
+                <p>&#9745; &nbsp; Connect with your trainer easily wherever you go.</p>
+            </div>
+            <div class="squ2">
+                <p>&#9746; &nbsp; Can't get to the gym? Missed sessions slow down your progression.</p>
+            </div>
+        </div>
+        <a href="">Try for FREE</a>
+        </section>
+    <!-------------------------------------------- section3 -------------------------------------------->
+    <section class="third">
+        <div class="prsnltrainer">
+            <h1>Personal Trainer keeps you<br>accountable</h1>
+            <p>Your personal trainer will monitor your progression via<br>video sessions, hone your technique and help you move<br>towards your goal effectively and safely whilst having<br>fun as you go. PT is also the best motivation not to skip<br>sessions or quit training altogether.</p>
+        </div>
+        <div class="prsnltrainerimg"></div>
+        <div class="prsnltrainerimg2"></div>
+        <div class="prsnltrainer2">
+            <h1>Online Training is flexible<br>and never boring</h1>
+            <p>Online workouts save time and resources. No more<br>wasting time getting to a gym or buying expensive<br>memberships! You'll be able to fit the training sessions<br>into your busiest schedule on your own terms.</p>
+        </div>
+    </section>
+    <!-------------------------------------------- section4 -------------------------------------------->
+    <section class="four">
+        <h1>Choose the program you like</h1>
+        <div class="programimg"></div>
+    </section>
+    <!-------------------------------------------- section5 -------------------------------------------->
+    <section class="five">
+        <h1>Don't know what type of training will suit<br>you best?</h1>
+        <p>No worries, we will manage it!</p>
+        <p>Share your goals and we will select the optimal type of training and a trainer for you.</p>
+        <a href="">Share Your Goals</a>
+    </section>
+    <!-------------------------------------------- section6 -------------------------------------------->
+    <section class="six">
+        <h1>Meet some of our trainers</h1>
+        <p>We believe that great results are achievable through a comfortable and effective human interaction rather than ingenious training programmes.</p>
+        <p>WowFit employs 50+ experienced professionals who have passed expert selection. We are confident in their professionalism and ability to find an individual approach.</p>
+        <div class="trainersimg"></div>
+        <div class="trainersdata">
+            <h1>Owen</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, voluptatibus.</p>
+            <a href="">Show more</a>
+        </div>
+        <div class="trainersdata">
+            <h1>Courtney</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, veritatis?</p>
+            <a href="">Show more</a>
+        </div>
+        <div class="trainersdata">
+            <h1>George</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, minus.</p>
+            <a href="">Show more</a>
+        </div>
+        <div class="trainersdata">
+            <h1>Riya</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, exercitationem!</p>
+            <a href="">Show more</a>
+        </div>
+        <a href=""><b>Load more</b></a>
+    </section>
+    <!-------------------------------------------- section7 -------------------------------------------->
+    <section class="seven">
+        <h1>Choose your Plan</h1>
+        <p>Try for free! No credit card required.<br>Pay securely! Moneyback at any time.</p>
+        <br><br>
+        <div class="pricing">
+            <div class="price1">
+                <h2>60 minutes</h2><p>STARTING AT</p>
+                <h1>$19.90</h1><p>per session</p>
+            </div>
+            <div class="price1">
+                <h2>45 minutes</h2><p>STARTING AT</p>
+                <h1>$17.90</h1><p>per session</p>
+            </div>
+            <div class="price1">
+                <h2>30 minutes</h2><p>STARTING AT</p>
+                <h1>$14.90</h1><p>per session</p>
+            </div>
+            <a href=""><b>See Full Pricing</b></a>
+        </div>
+        <div class="freesession">
+            <h1>First Session is Free</h1>
+            <p>No credit card required. A full 60-minute workout with a handpicked trainer.</p>
+            <a href="">Try for FREE</a>
+        </div>
+    </section>
+    <!-------------------------------------------- section8 -------------------------------------------->
+    <section class="eight">
+        <div class="circle1">&#8678;</div>
+        <div class="circle2">&#8680;</div>
+        <h1>What our clients say</h1>
+        <p>My workout sessions with Judy have been extremely valuable. In the last month I have definitely<br>become stronger and increased endurance. Since our first session, Judy listened to my needs and<br>has structured our workout sessions accordingly. Judy is always on time and easy to communicate<br>with outside of our sessions.</p>
+        <h2>~Neha R.</h2>
+    </section>
+    <!-------------------------------------------- section9 -------------------------------------------->
+    <section class="nine">
+        <div class="info">
+            <h1 style="color: rgb(71,182,165);">Book</h1><h1> a free trail</h1>
+            <p>Tell us about your goals, and we will find you a perfect trainer.</p>
+            <input type="name" placeholder=" Your Name">
+            <input type="number" placeholder=" +91 (99999) 99999">
+            <input type="email" placeholder=" E-mail">
+            <input type="text" placeholder=" Your Current Location(City, Town, etc...)">
+            <input type="text" placeholder=" Any comments, your fitness goals, or convenient time for an initial call">
+            <input type="checkbox">
+            <pre>I accept the <a href="">privacy policy</a> and <a href="">terms of service.</a></pre>
+            <a href="" class="getstarted"><b>Get Started</b></a>
+        </div>
+    </section>
+    <!-------------------------------------------- section10 -------------------------------------------->
+    <section class="ten">
+        <h1>FAQ</h1>
+        <div class="faq1">
+            <h1>What equipment do I need for a trial class?</h1>
+            <div class="circle3"><p style="padding-left: 10px;">&plus;</p></div>
+        </div>
+        <div class="faq1">
+            <h1>Can I ask for a substitute coach?</h1>
+            <div class="circle3"><p style="padding-left: 10px;">&plus;</p></div>
+        </div>
+        <div class="faq1">
+            <h1>Will the trainer correct my exercise techniques / will them see how I exercise?</h1>
+            <div class="circle3"><p style="padding-left: 10px;">&plus;</p></div>
+        </div>
+        <div class="faq1">
+            <h1>Can I exercise from a gym?</h1>
+            <div class="circle3"><p style="padding-left: 10px;">&plus;</p></div>
+        </div>
+        <div class="faq1">
+            <h1>Does fitness over the internet and video conferencing really work?</h1>
+            <div class="circle3"><p style="padding-left: 10px;">&plus;</p></div>
+        </div>
+        <div class="faq1">
+            <h1>How much space do I need for my session?</h1>
+            <div class="circle3"><p style="padding-left: 10px;">&plus;</p></div>
+        </div>
+        <div class="faq1">
+            <h1>Do I need a laptop or a mobile phone?</h1>
+            <div class="circle3"><p style="padding-left: 10px;">&plus;</p></div>
+        </div>
+        <div class="faq1">
+            <h1>Is there a weight limit to start?</h1>
+            <div class="circle3"><p style="padding-left: 10px;">&plus;</p></div>
+        </div>
+        <div class="faq1">
+            <h1>I had a bad experience with trainers...</h1>
+            <div class="circle3"><p style="padding-left: 10px;">&plus;</p></div>
+        </div>
+    </section>
+    <!-------------------------------------------- section11 -------------------------------------------->
+    <section class="eleven">
+        <div class="abc">
+            <h1>WOW FIT</h1>
+            <p>&copy; 2023 Online Fitness Technologies Inc. All rights reserved</p>
+        </div>
+        <div class="abc">
+            <p>About</p><p>How it works</p><p>Trainers</p><p>Pricing</p><p>FAQ</p><p>Gift Certificate</p><p>Work with Us</p>
+        </div>
+        <div class="abc">
+            <p>Privacy Policy</p><p>Terms of Service</p><p>Code of Conduct</p><p>Disclaimer of Medical Advice</p><p>Cancellation, Refund,</p><p>Referral Policy</p>
+        </div>
+        <div class="abc">
+            <p>Contact Us</p><p>hello@mywowfit.com</p><p>+1 (650) 422-2376</p><p>+44 (20) 4577-3050</p><p>WhatsApp</p><p>USA: 1111B S Governors Ave #6047 Dover, DE 19904</p><p>UK: 124 City Road, London,</p><p>EC1V 2NX</p>
+        </div>
+    </section>
+</body>
+</html>
