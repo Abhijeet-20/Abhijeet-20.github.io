@@ -37,7 +37,9 @@ body,html{
     width: 100%;
     height: 100%;
     background-color: #FAFBF8;
+    scroll-behavior: smooth;
 }
+/*-- navbar -- */
 .nav{
     width: 100%;
     height: 10vh;
@@ -45,8 +47,6 @@ body,html{
 nav{
     width: 100%;
     height: 10vh;
-    /* background-color: #FAFBF8; */
-    /* position: sticky; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,61 +69,30 @@ nav{
     text-decoration: none;
     color: #000;
 }
-.contactBtn {
-    padding: 10px 15px;
-    font-size: 16px;
-    background: transparent;
-    border: none;
-    position: relative;
-    color: #f0f0f0;
-    z-index: 1;
+.contactBtn{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 10px 20px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
   }
   
-  .contactBtn::after,
-  .contactBtn::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -99999;
-    transition: all .4s;
+  .contactBtn:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
   }
   
-  .contactBtn::before {
-    transform: translate(0%, 0%);
-    width: 100%;
-    height: 100%;
-    background: #28282d;
-    border-radius: 10px;
+  .contactBtn:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
   }
-  
-  .contactBtn::after {
-    transform: translate(10px, 10px);
-    width: 35px;
-    height: 35px;
-    background: #ffffff15;
-    backdrop-filter: blur(5px);
-    border-radius: 50px;
-  }
-  
-  .contactBtn:hover::before {
-    transform: translate(5%, 20%);
-    width: 110%;
-    height: 110%;
-  }
-  
-  .contactBtn:hover::after {
-    border-radius: 10px;
-    transform: translate(0, 0);
-    width: 100%;
-    height: 100%;
-  }
-  
-  .contactBtn:active::after {
-    transition: 0s;
-    transform: translate(0, 5%);
-  }
+
+  /*-- underline effect --*/
   .underline {
     display: inline-block;
     position: relative;
@@ -148,8 +117,7 @@ nav{
     transform-origin: bottom left;
   }
 
-
-
+/* landing page   */
 
 .one{
     width: 100%;
@@ -183,11 +151,12 @@ nav{
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
 }
+/* section two */
 
 .two{
     width: 100%;
     height: 100vh;
-    background-color: #fff;
+    background-color: #111;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,14 +167,14 @@ nav{
     text-align: center;
     font-family: Cabinet;
 }
+/* section three[about] */
+
 .three{
     width: 100%;
     height: 100vh;
-    /* background-color: yellow; */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
 }
 .about{
     display: flex;
@@ -213,7 +182,6 @@ nav{
     justify-content: center;
     width: 50%;
     height: 100%;
-    /* background-color: blue; */
 }
 
 .about img{
@@ -228,7 +196,6 @@ nav{
     justify-content: center;
     width: 50%;
     height: 100%;
-    /* background-color: red; */
     flex-direction: column;
     gap: 20px;
     font-size: 1.2vw;
@@ -239,18 +206,15 @@ nav{
 }
 .abouttxt h3{
     font-family: CabinetLight;
+    font-size: 16px;
 }
-
-
-
+/* section four [abhijeet?]*/
 #name-div {
     width: 100%;
     white-space: nowrap;
     position: relative;
     overflow-x: auto;
-    /* margin-bottom: 13vh; */
     overflow-y: hidden;
-    background-color: #000;
 }
 
 #name-div::-webkit-scrollbar {
@@ -258,11 +222,14 @@ nav{
 }
 
 #name-div h1 {
-    color: #FAFBF8;
+    /* color: #FAFBF8; */
+    color: #000;
     font-size: 8vw;
     margin-right: 2vw;
     display: inline-block;
 }
+/* section five[tools] */
+
 .five{
     width: 100%;
     /* height: 100vh; */
@@ -309,7 +276,7 @@ nav{
     opacity: 1;
     margin-left: 20px;
 }
-
+/* section six */
 .six{
     width: 100%;
     /* height: 100vh; */
@@ -340,18 +307,16 @@ nav{
     cursor: pointer;
     font-size: 5vh;
 }
+/* section seven [contact] */
 
 .seven{
     width: 100%;
-    /* height: 100vh; */
-    /* background-color: red; */
     padding: 20px 0;
 }
 .seven>h1{
     text-align: center;
     font-size: 15vh;
     font-family: Cabinet;
-    /* background-color: #fff */
 }
 .con{
     width: 100%;
@@ -359,52 +324,38 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-color: blue; */
 }
 .formsubmit{
     width: 60%;
     height: 100%;
-    /* background-color: blue; */
     padding: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* background-color: yellow; */
-    
+    /* background-color: red;     */
 }
 .formtxt{
-    /* background-color: red; */
-    padding: 10px 20px;
+    padding: 20px 0px;
     width: 100%;
-    margin-bottom: 30px;
+    /* background-color: yellow; */
 }
 .formtxt>h1{
     font-size: 3vw;
     margin-bottom: 10px;
     font-family: Cabinet;
 }
-
+.formtxt>p{
+    font-size: 18px;
+    color: gray;
+}
 .formsubmit form{
-    /* background-color: blue; */
-    /* margin-bottom: 20px; */
     width: 100%;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
-.formsubmit form input{
-    padding: 10px 20px;
-    width: 90%;
-    margin-bottom: 30px;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: #000;
-    border-bottom: 1px solid #000;
-    font-size: 18px;
-    font-family: cabinet;
-}
-.formsubmit form textarea{
+.formsubmit form input,textarea{
     padding: 10px 20px;
     width: 90%;
     margin-bottom: 30px;
@@ -430,13 +381,13 @@ nav{
     width: 40%;
     height: 100%;
     padding: 50px;
-    /* background-color: blue; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    /* background-color: pink; */
 }
-.contactinfo h1{
+.contactinfo>h1{
     font-size: 2vw;
     font-family: cabinet;
     margin-top: 10px;
@@ -444,18 +395,18 @@ nav{
 .contactinfo .digitalinfo{
     width: 90%;
     padding: 10px 0;
-    /* background-color: red; */
     border-bottom: 1px solid #000;
     cursor: pointer;
     margin: 10px;
+    /* background-color: yellowgreen; */
 }
 .contactinfo .digitalinfo h1{
     display: flex;
     gap: 10px;
     font-family: cabinetlight;
+    font-size: 20px;
 }
 .contactinfo .locationdiv{
-    /* background-color: red; */
     width: 90%;
     font-family: cabinetlight;
     padding: 10px 0;
@@ -464,6 +415,7 @@ nav{
 .contactinfo .locationdiv h1,h2{
     font-family: cabinetlight;
 }
+/* footer */
 footer{
     padding: 0 4vw;
     width: 100%;
@@ -471,12 +423,12 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: red; */
 }
 footer h1{
     font-size: 16px;
     font-family: cabinetlight;
 }
+
 @media (max-width:600px) {
     .nav1 h3{
         font-size: 8vw;
@@ -492,6 +444,10 @@ footer h1{
   .nav2 h3 a{
     display: none;
   }
+  #cursorcircle{
+    display: none;
+  }
+
   .three{
     width: 100%;
     height: 100vh;
@@ -510,6 +466,9 @@ footer h1{
     height: 50vh;
     font-size: 3.5vw;
   }
+  .ele{
+    padding: 6vh 3vw;
+  }
   .six{
     padding: 10px;
   }
@@ -517,4 +476,36 @@ footer h1{
     width: 90%;
     height: 200px;
   }
+  .seven>h1{
+    font-size: 10vw;
+  }
+  .con{
+    flex-direction: column;
+    /* padding-left: 10px; */
+  }
+  .formsubmit{
+    padding: 0;
+    width: 100%;
+  }
+  .formsubmit form{
+    margin-top: 20px;
+    padding-left: 10px;
+  }
+  .formtxt{
+    padding: 0;
+    padding-left: 10px;
+  }
+  .formtxt>h1{
+    padding-top: 10px;
+    font-size: 8vw;
+  }
+  .contactinfo{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+  }
+  .contactinfo h1{
+    font-size: 6vw;
+  }
+  
 }
