@@ -119,17 +119,17 @@ function display_ct7() {
   display_c7();
 
 
-  var links = document.querySelectorAll('.location');
-  links.forEach(()=>{
-    let hashval = anchorLink.getAttribute('href');
-    let target = document.querySelector(hashval);
-    links.addEventListener('click',(e)=>{
-        e.preventDefault();
-        e.stopPropagation();
+  // var links = document.querySelectorAll('.location');
+  // links.forEach(()=>{
+  //   let hashval = anchorLink.getAttribute('href');
+  //   let target = document.querySelector(hashval);
+  //   links.addEventListener('click',(e)=>{
+  //       e.preventDefault();
+  //       e.stopPropagation();
     
-        locomotiveScroll.scrollTo(target);
-    });
-  })
+  //       locomotiveScroll.scrollTo(target);
+  //   });
+  // });
 
 var tl= gsap.timeline();
 tl.from(".nav1,.nav2",{
