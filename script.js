@@ -119,21 +119,17 @@ function display_ct7() {
   display_c7();
 
 
-  // const anchorLinks = document.querySelectorAll('.nav2 .location');
-
-  // anchorLinks.forEach((anchorLink) => {
-  //   let hashval = anchorLink.getAttribute('href');
-  //   let target = document.querySelector(hashval);
-  
-  //   anchorLink.addEventListener('click', (e) => {
-  //     e.preventDefault();
-  //     e.stopPropagation();
-  
-  //     locomotiveScroll.scrollTo(target);
-  //   });
-  // });
-
-
+  var links = document.querySelectorAll('.location');
+  links.forEach(()=>{
+    let hashval = anchorLink.getAttribute('href');
+    let target = document.querySelector(hashval);
+    links.addEventListener('click',(e)=>{
+        e.preventDefault();
+        e.stopPropagation();
+    
+        locomotiveScroll.scrollTo(target);
+    });
+  })
 
 var tl= gsap.timeline();
 tl.from(".nav1,.nav2",{
@@ -174,8 +170,8 @@ tl.from(".about img",{
     scroller: ".all",
     // markers:true,
     scrub: 0.7,
-    start:"top 60%",
-    end:"top 30%"
+    start:"top 80%",
+    end:"top 50%"
   }
 })
 tl.from(".abouttxt",{
@@ -186,8 +182,8 @@ tl.from(".abouttxt",{
     scroller: ".all",
     // markers:true,
     scrub: 0.7,
-    start:"top 100%",
-    end:"top 30%"
+    start:"top 80%",
+    end:"top 50%"
   }
 })
 
@@ -214,17 +210,6 @@ tl.from("#two",{
   }
 })
 
-tl.from(".projects",{
-  opacity:0,
-  scrollTrigger: {
-    trigger: ".projects",
-    scroller: ".all",
-    // markers:true,
-    scrub: 0.7,
-    start:"top 60%",
-    end:"top 30%"
-  }
-})
 
 tl.from(".project1",{
   opacity:0,

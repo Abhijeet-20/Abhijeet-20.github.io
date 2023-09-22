@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amita&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="icon" href="/images/icon.png">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
@@ -20,10 +21,10 @@
                 <h3>अभिजीत</h3>
             </div>
             <div class="nav2">
-                <h3><a href="#aboutme" class="underline" class="location">about</a></h3>
-                <h3><a href="" class="underline">services</a></h3>
-                <h3><a href="" class="underline">projects</a></h3>
-                <button class="contactBtn" id="contactme">Contact !</button>
+                <h3><a href="#aboutme" class="underline location">about</a></h3>
+                <h3><a href="#skillsme" class="underline location">skills</a></h3>
+                <h3><a href="#projectme" class="underline location">projects</a></h3>
+                <a href="mailto:abhijeetbaliyan000@gmail.com"><button class="contactBtn">Contact !</button></a>
             </div>
         </nav>
         <!-- landing page -->
@@ -35,16 +36,16 @@
         </section>
         <!-- section two  -->
         <section class="two">
-            <h1>I create elevating digital experiences that inspire and connect with people through development and design.</h1>
+            <h1>I create and design compelling digital experiences through websites that inspire and connect with individuals, helping them grow their businesses or enhance their online presence</h1>
         </section>
         <!-- section three[about] -->
-        <section class="three">
+        <section class="three" id="aboutme">
             <div class="about">
-                <img src="./images/profile.jpeg" alt="">
+                <img src="/images/icon.png" alt="">
             </div>
-            <div class="abouttxt" id="aboutme">
+            <div class="abouttxt" >
                 <h2>(About me)</h2>
-                <h3>Lorem ipsum dolor uodmos doloribus vero impedit? Voluptates consequatur culpa consequuntur! Iusto qui atque vel nisi dignissimos sapiente natus, voluptates accusamus quasi, nesciunt, obcaecati deleniti aperiam nemo eum amet quibusdam totam commodi provident nihil impedit. Rerum at eveniet tempore laudantium laboriosam eum quod unde. Molestias odit tempore, cupiditate magnam placeat dolorem laborum porro aut officia neque qui, sequi excepturi harum nihil amet reiciendis velit assumenda et iusto possimus dolores incidunt tenetur ullam maxime? Asperiores rem sint dolorem eos fugit veritatis quos, eligendi aspernatur nostrum, quaerat voluptatum sed!</h3>
+                <h3>Hello! 👋 I'm Abhijeet Chaudhary, a skilled frontend web developer and UI/UX designer located in India. 🇮🇳<br><br>My expertise lies in creating sophisticated, user-friendly, and sleek designs tailored for startups and small enterprises, ensuring they make a memorable and impactful impression in the online world. 💼✨<br><br>Beyond my work, you might catch me indulging in a Netflix marathon 📺 or immersed in the world of video games 🎮 when I'm not busy coding and designing. 🕹️👾<br><br>Feel free to connect with me to explore how I can elevate your online presence! 🌐✨</h3>
             </div>
         </section>
         <!-- section four[abhijee??] -->
@@ -57,7 +58,7 @@
             </div>
         </section>
         <!-- section five[tools and expertize] -->
-        <section class="five">
+        <section class="five" id="skillsme">
             <div id="two">
                 <div class="ele">
                     <img src="./images/tools.png" alt="">
@@ -70,18 +71,34 @@
             </div>
         </section>
         <!-- section six[projects] -->
-        <section class="six">
+        <section class="six" id="projectme">
             <div class="projects">
-                <div class="project1"></div>
-                <div class="project1"></div>
-                <div class="project1"></div>
-                <div class="project1"></div>
-                <div class="project1"></div>
-                <div class="project1"></div>
-                <div class="project1"></div>
-                <div class="project1"></div>
+                <div class="project1">
+                    <a href="https://abijeet20-movieapp.netlify.app/" target="_blank"><video src="/images/MovieApp.webm" autoplay loop muted></video></a>
+                </div>
+                <div class="project1">
+                    <a href="https://abhijeet20-pepsi.netlify.app/" target="_blank"><video src="/images/Pepsi.webm" autoplay loop muted></video></a>
+                </div>
+                <div class="project1">
+                    <a href="https://abhijeet20-starkbucks.netlify.app/" target="_blank"><video src="/images/starBucks.webm" autoplay loop muted></video></a>
+                </div>
+                <div class="project1">
+                    <a href="https://abhijeet20-livenews.netlify.app/" target="_blank"><video src="/images/LivenNews.webm" autoplay loop muted></video></a>   
+                </div>
+                <div class="project1">
+                    <a href="https://abhijeet20-memorygame.netlify.app/" target="_blank"><video src="/images/MemoryGame.webm" autoplay loop muted></video></a>
+                </div>
+                <div class="project1">
+                    <a href="https://abhijeet20-cynthiaportfolio.netlify.app/" target="_blank"><video src="/images/Cynthia Ugwu.webm" autoplay loop muted></video></a>
+                </div>
+                <div class="project1">
+                    <a href="https://abhijeet20-emojify.netlify.app/" target="_blank"><video src="/images/Emojify.webm" autoplay loop muted></video></a>
+                </div>
+                <div class="project1">
+                    <a href="https://abhijeet20-imagesearch.netlify.app/" target="_blank"><video src="/images/Image Search.webm" autoplay loop muted></video></a>
+                </div>
             </div>
-            <h1><i class="ri-arrow-left-circle-fill"></i>See all projects</h1>
+            <a href="https://github.com/Abhijeet-20?tab=repositories" target="_blank"><h1><i class="ri-arrow-left-circle-fill"></i>See all projects</h1></a>
         </section>
 
         <!-- section seven[contact] -->
@@ -94,26 +111,28 @@
                     <h1>Let's bring it to life.</h1>
                     <p>I am looking for freelance opportunities or internship in companies, startups, and agencies.</p>
                     </div>
-                    <form action="">
-                        <input type="text" name="Name" placeholder="Full Name" required>
-                        <input type="email" name="Email" placeholder="Email" required>
-                        <textarea name="Message" placeholder="Message" required></textarea>
+                    <form action="https://formsubmit.co/abhijeetchaudhary.work@gmail.com" method="POST">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- <input type="hidden" name="_autoresponse" value="Thankyou for your message!"> -->
+                        <textarea name="message" placeholder="Message" required></textarea>
                         <button type="submit">Send</button>
                     </form>
                 </div>
-                <div class="contactinfo">
+                <div class="contactinfo" id="contactme">
                     <h1>Socials</h1>
                     <div class="digitalinfo">
-                        <h1><i class="ri-mail-fill"></i>abhijeetbaliyan000@gmail.com</h1>
+                        <a href="mailto:abhijeetbaliyan000@gmail.com"><h1><i class="ri-mail-fill"></i>abhijeetbaliyan000@gmail.com</h1></a>          
                     </div>
                     <div class="digitalinfo">
-                        <h1><i class="ri-linkedin-box-fill"></i>abhijeetbaliyan</h1>
+                        <a href="https://www.linkedin.com/in/abhijeetttt/" target="_blank"><h1><i class="ri-linkedin-box-fill"></i>abhijeetttt</h1></a>
                     </div>
                     <div class="digitalinfo">
-                        <h1><i class="ri-github-fill"></i>Abhijeet20</h1>
+                        <a href="https://github.com/Abhijeet-20" target="_blank"><h1><i class="ri-github-fill"></i>Abhijeet-20</h1></a>
                     </div>
                     <div class="digitalinfo">
-                        <h1><i class="ri-instagram-fill"></i>_abhijeettt._</h1>
+                        <a href="https://www.instagram.com/_abhijeettt._/" target="_blank"><h1><i class="ri-instagram-fill"></i>_abhijeettt._</h1></a>
                     </div>
                     <h1>Location</h1>
                     <div class="locationdiv">
