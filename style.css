@@ -187,9 +187,11 @@ nav{
 
 .about img{
     width: 250px;
+    /* object-fit: contain; */
+    /* object-position: top; */
     height: 250px;
     border-radius: 50%;
-    scale: 1.1;
+    /* scale: 1.1; */
 }
 .abouttxt{
     display: flex;
@@ -284,6 +286,10 @@ nav{
     /* height: 100vh; */
     background-color: #CFCAC1;
     padding: 10vh;
+}
+.six>h1{
+    font-size: 5vh;
+    font-family: cabinet;
 }
 .projects{
     width: 100%;
